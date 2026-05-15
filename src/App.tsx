@@ -99,7 +99,7 @@ export default function App() {
             <div className="relative gold-border rounded-2xl overflow-hidden shadow-glow bg-black">
               <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
                 <iframe
-                  src="/seu-video.mp4"
+                  src="/aula.mp4"
                   className="absolute inset-0 w-full h-full"
                   style={{ border: "none" }}
                   allow="autoplay; encrypted-media; fullscreen"
