@@ -72,7 +72,7 @@ export default function App() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-  <div className="flex items-center">
+  <div className="flex items-center"> 
     <img
       src="/ascensao-logo.png"
       alt="Ascensão Pro"
