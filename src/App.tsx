@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 
-const [playVideo, setPlayVideo] = useState(false);
-
 function CTAButton({ children, large = false }: { children: React.ReactNode; large?: boolean }) {
   return (
     <a
@@ -57,6 +55,7 @@ function ProblemItem({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   const [scrolled, setScrolled] = useState(false);
+  const [playVideo, setPlayVideo] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
