@@ -1,10 +1,6 @@
 import { useEffect, useState } from "react";
 
-const CHECKOUT_URL =
-  import.meta.env.VITE_CHECKOUT_URL ?? "https://chk.eduzz.com/801E4VKNW7";
-const VIDEO_URL =
-  import.meta.env.VITE_VIDEO_URL ??
-  "https://drive.google.com/file/d/1bvNl-cbUbT0nOAi-bXs8I7Qzx8rlBXXi/preview";
+const [playVideo, setPlayVideo] = useState(false);
 
 function CTAButton({ children, large = false }: { children: React.ReactNode; large?: boolean }) {
   return (
@@ -128,28 +124,44 @@ export default function App() {
 
       {/* VIDEO */}
       <section id="aula" className="px-4 md:px-6 pb-16 md:pb-20">
-        <div className="max-w-5xl mx-auto">
-          <div className="relative animate-fade-up" style={{ animationDelay: "0.3s" }}>
-            <div className="absolute -inset-4 bg-gradient-to-r from-gold/30 via-gold-light/20 to-gold/30 rounded-3xl blur-2xl opacity-60" />
-            <div className="relative gold-border rounded-2xl overflow-hidden shadow-glow bg-black">
-              <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
-                <iframe
-                  src="https://drive.google.com/file/d/1bvNl-cbUbT0nOAi-bXs8I7Qzx8rlBXXi/preview"
-                  className="absolute inset-0 w-full h-full"
-                  style={{ border: "none" }}
-                  allow="autoplay; encrypted-media; fullscreen"
-                  allowFullScreen
-                  title="Aula Ascensão Pro"
-                />
+  <div className="max-w-5xl mx-auto">
+    <div className="relative animate-fade-up" style={{ animationDelay: "0.3s" }}>
+      
+      <div className="absolute -inset-4 bg-gradient-to-r from-gold/30 via-gold-light/20 to-gold/30 rounded-3xl blur-2xl opacity-60" />
+
+      <div className="relative gold-border rounded-2xl overflow-hidden shadow-glow bg-black">
+        <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+
+          {!playVideo && (
+            <div
+              onClick={() => setPlayVideo(true)}
+              className="absolute inset-0 cursor-pointer flex items-center justify-center bg-black/50"
+            >
+              <div className="w-20 h-20 rounded-full bg-gold flex items-center justify-center">
+                ▶
               </div>
             </div>
-          </div>
+          )}
 
-          <div className="mt-10 md:mt-12 text-center animate-fade-up" style={{ animationDelay: "0.45s" }}>
-            <CTAButton large>Quero destravar meu crescimento</CTAButton>
-          </div>
+          {playVideo && (
+            <iframe
+              src="https://drive.google.com/file/d/1bvNl-cbUbT0nOAi-bXs8I7Qzx8rlBXXi/preview"
+              className="absolute inset-0 w-full h-full"
+              style={{ border: "none" }}
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+              title="Aula Ascensão Pro"
+            />
+          )}
         </div>
-      </section>
+      </div>
+    </div>
+
+    <div className="mt-10 md:mt-12 text-center animate-fade-up" style={{ animationDelay: "0.45s" }}>
+      <CTAButton large>Quero destravar meu crescimento</CTAButton>
+    </div>
+  </div>
+</section>
 
       {/* STATS */}
       <section className="px-6 py-16 md:py-24">
