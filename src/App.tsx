@@ -78,7 +78,7 @@ export default function App() {
       alt="Ascensão Pro"
       className="h-8 md:h-10 w-auto brightness-0 invert"
     />
-  </div>
+  </div> 
           <a
             href="https://chk.eduzz.com/801E4VKNW7"
             target="_blank"
