@@ -79,7 +79,7 @@ export default function App() {
             <img
               src="/ascensao-logo.png"
               alt="Ascensão Pro"
-              className="h-8 md:h-10 w-auto brightness-0 invert"
+              className="h-10 md:h-12 w-auto object-contain"
             />
           </div>
           <a
@@ -226,11 +226,11 @@ export default function App() {
       {/* FOOTER */}
       <footer className="px-6 py-12 border-t border-white/5 mt-10">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="mb-2">
+          <div className="mb-4 flex justify-center">
             <img
               src="/ascensao-logo.png"
               alt="Ascensão Pro"
-              className="h-8 md:h-10 w-auto mx-auto invert brightness-0"
+              className="h-12 md:h-14 w-auto object-contain"
             />
           </div>
           <p className="text-xs text-white/40 uppercase tracking-[0.2em]">
