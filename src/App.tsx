@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react";
 
+const CHECKOUT_URL =
+  import.meta.env.VITE_CHECKOUT_URL ?? "https://chk.eduzz.com/801E4VKNW7";
+const VIDEO_URL =
+  import.meta.env.VITE_VIDEO_URL ??
+  "https://drive.google.com/file/d/1bvNl-cbUbT0nOAi-bXs8I7Qzx8rlBXXi/preview";
+
 function CTAButton({ children, large = false }: { children: React.ReactNode; large?: boolean }) {
   return (
     <a
@@ -53,7 +59,7 @@ function ProblemItem({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default function App() { 
+export default function App() {
   const [scrolled, setScrolled] = useState(false);
   const [playVideo, setPlayVideo] = useState(false);
 
@@ -72,13 +78,13 @@ export default function App() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-  <div className="flex items-center"> 
-    <img
-      src="/ascensao-logo.png"
-      alt="Ascensão Pro"
-      className="h-8 md:h-10 w-auto brightness-0 invert"
-    />
-  </div> 
+          <div className="flex items-center">
+            <img
+              src="/ascensao-logo.png"
+              alt="Ascensão Pro"
+              className="h-8 md:h-10 w-auto brightness-0 invert"
+            />
+          </div>
           <a
             href="https://chk.eduzz.com/801E4VKNW7"
             target="_blank"
@@ -120,42 +126,41 @@ export default function App() {
 
       {/* VIDEO */}
       <section id="aula" className="px-4 md:px-6 pb-16 md:pb-20">
-  <div className="max-w-5xl mx-auto">
-    <div className="relative animate-fade-up" style={{ animationDelay: "0.3s" }}>
-      
-      <div className="absolute -inset-4 bg-gradient-to-r from-gold/30 via-gold-light/20 to-gold/30 rounded-3xl blur-2xl opacity-60" />
+        <div className="max-w-5xl mx-auto">
+          <div className="relative animate-fade-up" style={{ animationDelay: "0.3s" }}>
+            <div className="absolute -inset-4 bg-gradient-to-r from-gold/30 via-gold-light/20 to-gold/30 rounded-3xl blur-2xl opacity-60" />
 
-      <div className="relative gold-border rounded-2xl overflow-hidden shadow-glow bg-black">
-        <div className="relative w-full bg-black" style={{ paddingBottom: "56.25%" }}>
-          {/* Thumbnail ou vídeo */}
-          {!playVideo ? (
-            <div
-              onClick={() => setPlayVideo(true)}
-              className="absolute inset-0 cursor-pointer flex items-center justify-center bg-gradient-to-b from-black/20 to-black/60"
-            >
-              <div className="w-20 h-20 rounded-full bg-gold flex items-center justify-center hover:scale-110 transition-transform">
-                <span className="text-black text-3xl font-bold">▶</span>
+            <div className="relative gold-border rounded-2xl overflow-hidden shadow-glow bg-black">
+              <div className="relative w-full bg-black" style={{ paddingBottom: "56.25%" }}>
+                {/* Thumbnail ou vídeo */}
+                {!playVideo ? (
+                  <div
+                    onClick={() => setPlayVideo(true)}
+                    className="absolute inset-0 cursor-pointer flex items-center justify-center bg-gradient-to-b from-black/20 to-black/60"
+                  >
+                    <div className="w-20 h-20 rounded-full bg-gold flex items-center justify-center hover:scale-110 transition-transform">
+                      <span className="text-black text-3xl font-bold">▶</span>
+                    </div>
+                  </div>
+                ) : (
+                  <iframe
+                    src="https://drive.google.com/file/d/1bvNl-cbUbT0nOAi-bXs8I7Qzx8rlBXXi/preview"
+                    className="absolute inset-0 w-full h-full"
+                    style={{ border: "none" }}
+                    allow="autoplay; encrypted-media"
+                    allowFullScreen
+                    title="Aula Ascensão Pro"
+                  />
+                )}
               </div>
             </div>
-          ) : (
-            <iframe
-              src="https://drive.google.com/file/d/1bvNl-cbUbT0nOAi-bXs8I7Qzx8rlBXXi/preview"
-              className="absolute inset-0 w-full h-full"
-              style={{ border: "none" }}
-              allow="autoplay; encrypted-media"
-              allowFullScreen
-              title="Aula Ascensão Pro"
-            />
-          )}
-        </div>
-      </div>
-    </div>
+          </div>
 
-    <div className="mt-10 md:mt-12 text-center animate-fade-up" style={{ animationDelay: "0.45s" }}>
-      <CTAButton large>Quero destravar meu crescimento</CTAButton>
-    </div>
-  </div>
-</section>
+          <div className="mt-10 md:mt-12 text-center animate-fade-up" style={{ animationDelay: "0.45s" }}>
+            <CTAButton large>Quero destravar meu crescimento</CTAButton>
+          </div>
+        </div>
+      </section>
 
       {/* STATS */}
       <section className="px-6 py-16 md:py-24">
@@ -225,12 +230,12 @@ export default function App() {
       <footer className="px-6 py-12 border-t border-white/5 mt-10">
         <div className="max-w-5xl mx-auto text-center">
           <div className="mb-2">
-  <img
-    src="/ascensao-logo.png"
-    alt="Ascensão Pro"
-    className="h-8 md:h-10 w-auto mx-auto"
-  />
-</div>
+            <img
+              src="/ascensao-logo.png"
+              alt="Ascensão Pro"
+              className="h-8 md:h-10 w-auto mx-auto"
+            />
+          </div>
           <p className="text-xs text-white/40 uppercase tracking-[0.2em]">
             © {new Date().getFullYear()} — Todos os direitos reservados
           </p>
