@@ -9,7 +9,7 @@ const VIDEO_URL =
 function CTAButton({ children, large = false }: { children: React.ReactNode; large?: boolean }) {
   return (
     <a
-      href={CHECKOUT_URL}
+      href="https://chk.eduzz.com/801E4VKNW7"
       target="_blank"
       rel="noopener noreferrer"
       className={`btn-premium inline-flex items-center justify-center gap-3 rounded-full font-semibold text-ink tracking-wide uppercase ${
@@ -78,15 +78,17 @@ export default function App() {
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <div className="flex flex-col leading-none">
-            <span className="font-display text-xl md:text-2xl font-bold tracking-wide">
-              ASCENSÃO <span className="text-gradient-gold">PRO</span>
-            </span>
+            <img
+  src="/ascensao-logo.png"
+  alt="Ascensão Pro"
+  className="h-8 md:h-10 w-auto"
+/>
             <span className="text-[10px] md:text-[11px] uppercase tracking-[0.18em] text-white/50 mt-1">
               Seu potencial máximo na carreira e negócios
             </span>
           </div>
           <a
-            href={CHECKOUT_URL}
+            href="https://chk.eduzz.com/801E4VKNW7"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:inline-flex items-center gap-2 text-sm font-medium text-gold hover:text-gold-light transition-colors"
@@ -132,7 +134,7 @@ export default function App() {
             <div className="relative gold-border rounded-2xl overflow-hidden shadow-glow bg-black">
               <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
                 <iframe
-                  src={VIDEO_URL}
+                  src="https://drive.google.com/file/d/1bvNl-cbUbT0nOAi-bXs8I7Qzx8rlBXXi/preview"
                   className="absolute inset-0 w-full h-full"
                   style={{ border: "none" }}
                   allow="autoplay; encrypted-media; fullscreen"
@@ -216,9 +218,13 @@ export default function App() {
       {/* FOOTER */}
       <footer className="px-6 py-12 border-t border-white/5 mt-10">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="font-display text-lg font-bold mb-2">
-            ASCENSÃO <span className="text-gradient-gold">PRO</span>
-          </div>
+          <div className="mb-2">
+  <img
+    src="/ascensao-logo.png"
+    alt="Ascensão Pro"
+    className="h-8 md:h-10 w-auto mx-auto"
+  />
+</div>
           <p className="text-xs text-white/40 uppercase tracking-[0.2em]">
             © {new Date().getFullYear()} — Todos os direitos reservados
           </p>
