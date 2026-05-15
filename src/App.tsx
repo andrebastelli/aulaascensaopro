@@ -4,7 +4,7 @@ const CHECKOUT_URL =
   import.meta.env.VITE_CHECKOUT_URL || "https://chk.eduzz.com/801E4VKNW7";
 const VIDEO_URL =
   import.meta.env.VITE_VIDEO_URL ||
-  "https://drive.google.com/file/d/1bvNl-cbUbT0nOAi-bXs8I7Qzx8rlBXXi/view?t=0.74";
+  "https://drive.google.com/file/d/1bvNl-cbUbT0nOAi-bXs8I7Qzx8rlBXXi/view?usp=sharing";
 
 function CTAButton({ children, large = false }: { children: React.ReactNode; large?: boolean }) {
   return (
