@@ -129,20 +129,18 @@ export default function App() {
       <div className="absolute -inset-4 bg-gradient-to-r from-gold/30 via-gold-light/20 to-gold/30 rounded-3xl blur-2xl opacity-60" />
 
       <div className="relative gold-border rounded-2xl overflow-hidden shadow-glow bg-black">
-        <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
-
-          {!playVideo && (
+        <div className="relative w-full bg-black" style={{ paddingBottom: "56.25%" }}>
+          {/* Thumbnail ou vídeo */}
+          {!playVideo ? (
             <div
               onClick={() => setPlayVideo(true)}
-              className="absolute inset-0 cursor-pointer flex items-center justify-center bg-black/50"
+              className="absolute inset-0 cursor-pointer flex items-center justify-center bg-gradient-to-b from-black/20 to-black/60"
             >
-              <div className="w-20 h-20 rounded-full bg-gold flex items-center justify-center">
-                ▶
+              <div className="w-20 h-20 rounded-full bg-gold flex items-center justify-center hover:scale-110 transition-transform">
+                <span className="text-black text-3xl font-bold">▶</span>
               </div>
             </div>
-          )}
-
-          {playVideo && (
+          ) : (
             <iframe
               src="https://drive.google.com/file/d/1bvNl-cbUbT0nOAi-bXs8I7Qzx8rlBXXi/preview"
               className="absolute inset-0 w-full h-full"
