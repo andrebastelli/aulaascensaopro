@@ -53,7 +53,7 @@ function ProblemItem({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default function App() {
+export default function App() { 
   const [scrolled, setScrolled] = useState(false);
   const [playVideo, setPlayVideo] = useState(false);
 
