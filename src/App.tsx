@@ -72,16 +72,13 @@ export default function App() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          <div className="flex flex-col leading-none">
-            <img
-  src="/ascensao-logo.png"
-  alt="Ascensão Pro"
-  className="h-8 md:h-10 w-auto"
-/>
-            <span className="text-[10px] md:text-[11px] uppercase tracking-[0.18em] text-white/50 mt-1">
-              Seu potencial máximo na carreira e negócios
-            </span>
-          </div>
+  <div className="flex items-center">
+    <img
+      src="/ascensao-logo.png"
+      alt="Ascensão Pro"
+      className="h-8 md:h-10 w-auto brightness-0 invert"
+    />
+  </div>
           <a
             href="https://chk.eduzz.com/801E4VKNW7"
             target="_blank"
