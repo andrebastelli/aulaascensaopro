@@ -233,7 +233,7 @@ export default function App() {
             <img
               src="/ascensao-logo.png"
               alt="Ascensão Pro"
-              className="h-8 md:h-10 w-auto mx-auto"
+              className="h-8 md:h-10 w-auto mx-auto invert brightness-0"
             />
           </div>
           <p className="text-xs text-white/40 uppercase tracking-[0.2em]">
